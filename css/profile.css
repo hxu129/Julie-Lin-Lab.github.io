@@ -1,0 +1,53 @@
+.profile-body { background: var(--paper); color: var(--ink-soft); }
+.profile-shell { min-height: 100vh; }
+
+.profile-hero {
+  align-items: center;
+  border-bottom: 1px solid var(--media-rule);
+  display: grid;
+  gap: clamp(2.5rem, 7vw, 8rem);
+  grid-template-columns: minmax(17rem, 0.78fr) minmax(22rem, 1.22fr);
+  margin: 0 auto;
+  max-width: var(--content);
+  min-height: clamp(25rem, 40vw, 38rem);
+  overflow: hidden;
+  padding: clamp(3rem, 7vw, 6.5rem) var(--page-pad);
+}
+
+.profile-hero__copy { position: relative; z-index: 1; }
+.profile-kicker { color: var(--blue); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; margin: 0 0 1rem; text-transform: uppercase; }
+.profile-hero h1 { color: var(--ink); font-family: 'Manrope', 'Noto Sans SC', sans-serif; font-size: clamp(2.8rem, 5vw, 5rem); font-weight: 600; letter-spacing: -0.075em; line-height: 0.94; margin: 0; }
+.profile-back { color: var(--blue); display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.03em; margin-top: 1.7rem; text-transform: uppercase; }
+.profile-back::before { content: '← '; }
+
+.profile-hero__art { align-self: stretch; margin: 0; min-height: 20rem; overflow: hidden; }
+.profile-hero__art img { display: block; height: 100%; object-fit: cover; object-position: 72% 60%; width: 100%; }
+
+.profile-content { display: grid; gap: clamp(2.5rem, 7vw, 8rem); grid-template-columns: minmax(13rem, 0.55fr) minmax(20rem, 1.45fr); margin: 0 auto; max-width: var(--content); padding: clamp(3.5rem, 8vw, 7rem) var(--page-pad); }
+.profile-aside { border-top: 1px solid var(--media-rule); padding-top: 1rem; }
+.profile-portrait { margin: 0 0 1.3rem; max-width: 14rem; overflow: hidden; }
+.profile-portrait img { aspect-ratio: 1; display: block; object-fit: cover; width: 100%; }
+.profile-links { display: flex; flex-wrap: wrap; gap: 0.9rem 1.25rem; }
+.profile-links a { color: var(--blue); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+
+.profile-reading { border-top: 1px solid var(--media-rule); display: grid; gap: 2.5rem; padding-top: 1rem; }
+.profile-reading section + section { border-top: 1px solid var(--media-rule); padding-top: 2.2rem; }
+.profile-reading h2 { color: var(--ink); font-size: 1.05rem; letter-spacing: -0.03em; margin: 0 0 1rem; }
+.profile-reading h5 { color: var(--ink-soft); font-family: 'Manrope', 'Noto Sans SC', sans-serif; font-size: clamp(0.98rem, 1.25vw, 1.08rem); font-weight: 400; line-height: 1.72; margin: 0; max-width: 47rem; }
+.profile-reading h5 li { margin: 0 0 0.8rem; padding-left: 0.25rem; }
+.profile-reading h5 br { content: ''; display: block; margin-top: 0.9rem; }
+.profile-reading .ftco-social { display: flex; flex-wrap: wrap; gap: 0.9rem 1.25rem; list-style: none; margin: 1.5rem 0 0; padding: 0; }
+.profile-reading .ftco-social a { color: var(--blue); font-size: 0.78rem; font-weight: 700; }
+
+@media (max-width: 860px) {
+  .profile-hero,
+  .profile-content { grid-template-columns: 1fr; }
+  .profile-hero { min-height: auto; }
+  .profile-hero__art { min-height: 17rem; }
+  .profile-portrait { max-width: 12rem; }
+}
+
+@media (max-width: 680px) {
+  .profile-hero h1 { font-size: clamp(2.6rem, 12vw, 3.9rem); }
+  .profile-content { gap: 2.5rem; }
+}

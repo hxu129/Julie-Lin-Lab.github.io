@@ -11,14 +11,26 @@ This revision supersedes the earlier all-page cartographic poster treatment. The
 - **News:** a real-photo journal using existing laboratory and event images.
 - **Join Us:** a quiet campus photograph and an application-information layout.
 
-Typography is deliberately narrowed: display serif is reserved for the Home title and selected paper title; all page titles, section headings, and directory UI use Manrope. Existing repository images are used as content, not as tinted decorative texture. The generated design mockups are planning references only and are not website assets.
+Typography is deliberately narrowed: the small wordmark may retain its display-serif character, while all page titles, section headings, selected-paper titles, and directory UI use Manrope. Existing repository images are used as content, not as tinted decorative texture. Generated layout mockups are planning references only; the separately generated field-note illustrations listed below are production assets and are never scientific evidence.
+
+## Revision 3 — Field notes, not a figure wall
+
+The release now follows a more legible visual contract, informed by contemporary research sites that let the work and current activity introduce the institution rather than front-loading institutional explanation. The visual language is a set of original, non-evidentiary field-note illustrations: graphite, muted blue, and minute copper marks on paper or midnight ink.
+
+1. **Evidence and atmosphere stay separate.** Generated images are explicitly decorative and carry no result, experimental condition, person, project, or scientific conclusion. Event stories retain real source photography; individual profiles retain original portraits only where available.
+2. **Reading is layered.** A research chapter opens with one exact source sentence. Its complete canonical statement remains available in a semantic `details` control, rather than being deleted or paraphrased.
+3. **Every page has one job.** Home introduces research, a selected publication, current news, and the team; Research provides the programme; Publications remain a dense archive; People provides a navigable roster and coherent personal profiles.
+4. **No visual claim inflation.** No AI image may resemble an experiment figure, microscopy result, molecular data panel, or factual laboratory photograph. No AI portrait is used for a lab member.
+5. **One restrained image grammar.** Use cool paper, midnight ink, muted steel blue, and rare copper. No fluorescent palette, mCherry-like UI colour, neon biology, generic DNA helix, or glossy 3D render.
+6. **Image quality is a performance budget.** Core rendered images use correctly sized WebP derivatives; original source files remain untouched. A sub-megabyte homepage media budget is preferable to a gallery of full-size JPEG/PNG downloads.
+7. **A click must not leave the system.** English personal profile pages replace the legacy Colorlib shell with the same header, responsive menu, typography, art treatment, and footer as the redesigned site while preserving their original biographical content.
 
 ## Release content and asset contract
 
 - `main` is the sole source of truth for visible research, publication, people, news, recruitment, and contact content. A visual re-layout may split source text into semantic HTML, but must not introduce a claim, omit a source fact, or paraphrase it into a different assertion.
-- The user-supplied `homepage_figure.zip` is a visual source only. Its iPSC differentiation montage is used as a decorative Research-page rail with empty alternative text and no added caption or research claim.
+- The user-supplied `homepage_figure.zip` is a visual source only. Its iPSC differentiation montage is retained in the repository but is not active in Revision 3; if it returns, it must remain decorative with empty alternative text and no added caption or research claim.
 - Existing source images may be re-cropped or reordered for visual hierarchy, but their placement must not imply a new result, project, affiliation, or event.
-- Generated concept images are review references only; no generated research image, publication figure, or scientific claim is deployed.
+- Generated layout mockups are review references only. The three deployed `rna-field-notes-*.webp` illustrations are original decorative artwork; they must never be presented as research images, publication figures, experimental evidence, or scientific claims.
 
 ## Decision
 
@@ -79,6 +91,9 @@ The focal question remains the laboratory's own established framing:
 | `images/Weixin*.png` | Candidate fluorescence hero/research imagery | Existing repository assets; provenance is not encoded in filenames | Identify experiment/paper/source and obtain desired credit wording before release |
 | `images/EMBO_Paper.jpg` | Selected-paper thumbnail | Existing repository asset | Confirm that it is the intended EMBO paper visual and retain citation link |
 | `images/iPSC-neuronal-differentiation.png` | Decorative visual rail on Research | User-supplied from `homepage_figure.zip`; not content evidence | User determines release authorization; retain empty alt text and no scientific caption |
+| `images/illustrations/rna-field-notes-hero.webp` | Home/Research decorative illustration | Generated original field-note art, WebP derivative | Decorative only; empty alt; no scientific, personnel, or event claim |
+| `images/illustrations/rna-field-notes-nocturne.webp` | Home/Publications decorative dark band | Generated original field-note art, WebP derivative | Decorative only; empty alt; no scientific, personnel, or event claim |
+| `images/illustrations/rna-field-notes-research.webp` | Research/People/Profile decorative illustration | Generated original field-note art, WebP derivative | Decorative only; empty alt; no scientific, personnel, or event claim |
 
 Existing repository presence establishes that an asset was previously deployed, not that every derivative or new use is legally cleared. The first implementation may use low-risk layout placeholders or already-published assets while the release ledger remains explicit.
 

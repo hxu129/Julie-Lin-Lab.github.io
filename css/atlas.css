@@ -652,10 +652,19 @@ h1,
 .research-essay--ink figure { grid-column: 1; grid-row: 1; }
 .research-essay--ink figure img { border: 0; }
 
+.research-human-models { border-bottom: 1px solid var(--media-rule); }
+.research-human-models__inner { align-items: center; display: grid; gap: clamp(2.5rem, 6vw, 7rem); grid-template-columns: minmax(14rem, 0.65fr) minmax(22rem, 1.35fr); margin: 0 auto; max-width: var(--content); padding: clamp(3.5rem, 8vw, 7rem) var(--page-pad); }
+.research-human-models__copy h2 { color: var(--ink); font-size: clamp(1.8rem, 3vw, 3rem); margin: 0 0 1rem; }
+.research-human-models__copy p { color: var(--slate); font-size: 0.93rem; margin: 0; max-width: 26rem; }
+.research-human-models figure { margin: 0; }
+.research-human-models figure img { border: 1px solid var(--media-rule); display: block; height: auto; width: 100%; }
+.research-human-models figcaption { color: var(--slate); font-size: 0.72rem; margin-top: 0.65rem; }
+
 .research-methods { background: var(--paper-deep); }
 .research-methods__inner { margin: 0 auto; max-width: var(--content); padding: clamp(3.25rem, 7vw, 6rem) var(--page-pad); }
 .research-methods__inner h2 { color: var(--ink); font-size: clamp(1.8rem, 3.4vw, 3.2rem); margin: 0 0 2rem; }
 .research-methods__list { border-top: 1px solid var(--media-rule); display: grid; grid-template-columns: repeat(3, 1fr); }
+.research-methods__list--two { grid-template-columns: repeat(2, 1fr); }
 .research-methods__list article { border-left: 1px solid var(--media-rule); padding: 1.5rem; }
 .research-methods__list article:first-child { border-left: 0; padding-left: 0; }
 .research-methods__list h3 { color: var(--ink); font-size: 1rem; margin: 0 0 0.6rem; }
@@ -733,6 +742,7 @@ h1,
   .home-publication__inner,
   .research-intro-v2,
   .research-essay__inner,
+  .research-human-models__inner,
   .archive-intro,
   .archive-feature,
   .people-intro,

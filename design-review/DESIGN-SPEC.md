@@ -13,6 +13,13 @@ This revision supersedes the earlier all-page cartographic poster treatment. The
 
 Typography is deliberately narrowed: display serif is reserved for the Home title and selected paper title; all page titles, section headings, and directory UI use Manrope. Existing repository images are used as content, not as tinted decorative texture. The generated design mockups are planning references only and are not website assets.
 
+## Release content and asset contract
+
+- `main` is the sole source of truth for visible research, publication, people, news, recruitment, and contact content. A visual re-layout may split source text into semantic HTML, but must not introduce a claim, omit a source fact, or paraphrase it into a different assertion.
+- The user-supplied `homepage_figure.zip` is a visual source only. Its iPSC differentiation montage is used as a decorative Research-page rail with empty alternative text and no added caption or research claim.
+- Existing source images may be re-cropped or reordered for visual hierarchy, but their placement must not imply a new result, project, affiliation, or event.
+- Generated concept images are review references only; no generated research image, publication figure, or scientific claim is deployed.
+
 ## Decision
 
 Create a high-impact, evidence-led research site: **Molecular Cartography**. The site should feel like a contemporary science atlas: a precise RNA-to-synapse journey expressed through editorial typography, fine rules, diagrammatic pathways, and real research imagery. It must not become a generic university template, an AI-biotech landing page, or a neon science-fiction interface.
@@ -57,7 +64,7 @@ The focal question remains the laboratory's own established framing:
 | Aged copper | `#A86B3D` | Rare figure marker and underlining detail only |
 | mCherry and fluorescent colours | source-dependent | Preserved only in a cited research image; never repeated as UI accents |
 
-- Typography: `DM Serif Display` (headings and selected pull quotes), `Manrope` (body/interface), `Source Serif 4` only for paper metadata/captions, and `Noto Sans SC` for Chinese.
+- Typography: `DM Serif Display` only for the Home title and selected-paper title; `Manrope` for all other headings, body, and interface; `Source Serif 4` only for paper metadata/captions; and `Noto Sans SC` where Chinese appears.
 - Geometry: open paper bands, cartographic rules, and square image frames. Avoid container-within-container card stacks and rounded card grids.
 - Icons: thin custom SVG line icons, 1.5 px stroke; arrows are part of the navigation system, not plain-text glyphs.
 - Motion: `transform`/`opacity` on scroll; a slow, CSS/SVG nucleus-to-synapse path in the hero; no auto-rotating slides. Every motion effect must obey `prefers-reduced-motion`.
@@ -71,15 +78,16 @@ The focal question remains the laboratory's own established framing:
 | `images/Chiasm.jpeg` / `Growth_Cone*.jpeg` | Neuronal-science atmospheric imagery | Already public on the current site; existing page credits Dr William A. Harris | Retain an explicit credit near any reuse; verify current intended credit wording |
 | `images/Weixin*.png` | Candidate fluorescence hero/research imagery | Existing repository assets; provenance is not encoded in filenames | Identify experiment/paper/source and obtain desired credit wording before release |
 | `images/EMBO_Paper.jpg` | Selected-paper thumbnail | Existing repository asset | Confirm that it is the intended EMBO paper visual and retain citation link |
+| `images/iPSC-neuronal-differentiation.png` | Decorative visual rail on Research | User-supplied from `homepage_figure.zip`; not content evidence | User determines release authorization; retain empty alt text and no scientific caption |
 
 Existing repository presence establishes that an asset was previously deployed, not that every derivative or new use is legally cleared. The first implementation may use low-risk layout placeholders or already-published assets while the release ledger remains explicit.
 
 ## Build sequence
 
 1. Replace the legacy Colorlib shell with a lightweight shared semantic layout, responsive top navigation, and a reusable token stylesheet.
-2. Build the complete home surface against the accepted concept; use real lab copy and only verified assets.
-3. Build Research, Publications, People, News, and Join Us using the same visual system, retaining all current factual content.
-4. Add English/Chinese parity and page metadata; remove unused legacy libraries and the failing global Google Maps script.
+2. Build the complete Home surface against the accepted concept; use source-derived lab copy and only verified assets.
+3. Build Research, Publications, People, News, and Join Us using page-specific rhythms, retaining the complete canonical source content.
+4. Add page metadata and remove unused legacy libraries and the failing global Google Maps script.
 5. Verify desktop and mobile views visually, test all internal links, and check reduced-motion behavior before release.
 
 ## Explicit non-goals

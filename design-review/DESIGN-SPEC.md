@@ -43,6 +43,14 @@ Publication imagery must be drawn from the paper record, not from decorative lab
 - Captions link to the DOI and identify the figure type, journal, and license. They are attribution, not a new interpretation of the data.
 - Publication layout uses a restrained paper field for the detailed multi-panel result and a separate midnight archive band for the graphical abstract, preventing page-to-page repetition while keeping one visual system.
 
+## Revision 6 — Research image hierarchy
+
+The Research page should not reuse the same generated illustration for every chapter. It now uses a deliberate progression: a credited external scientific image introduces the page without implying it is a Lin Lab result; Ann's supplied microscopy remains the only current laboratory evidence stage; an uncaptioned iPSC process montage is decorative visual material only; the technique chapter becomes an open text-led reading field rather than another image-and-text duplicate.
+
+- `Growth_Cone_2.jpeg` contains its original credit to Dr William A. Harris and is presented whole, without an interface colour treatment or added scientific inference.
+- The iPSC montage is the user-supplied visual material previously specified as decorative only. It has an empty alternative text and no added caption, title, condition, model, result, or claim.
+- This removes one redundant generated figure, while retaining the remaining field-note illustrations as explicitly decorative atmosphere.
+
 ## Release content and asset contract
 
 - `main` is the sole source of truth for visible research, publication, people, news, recruitment, and contact content. A visual re-layout may split source text into semantic HTML, but must not introduce a claim, omit a source fact, or paraphrase it into a different assertion.
@@ -116,6 +124,8 @@ The focal question remains the laboratory's own established framing:
 | `images/web/julie-profile.webp` | PI profile portrait | WebP derivative of existing repository portrait | Use only for Julie’s profile; do not generate or substitute identity imagery |
 | `images/web/paper-embj-2023-figure1.webp` | Publications selected-paper evidence | Complete Figure 1 rendered from the CC BY 4.0 EMBO Journal 2023 PDF, DOI `10.15252/embj.2022113168` | All panels retained; linked figure credit; no interpretation added |
 | `images/web/paper-cell-2019-graphical-abstract.webp` | Publications archive evidence | Complete CC BY 4.0 graphical abstract from the 2019 Cell article, DOI `10.1016/j.cell.2018.11.030` | Natural square ratio retained; linked figure credit; no interpretation added |
+| `images/web/growth-cone-harris.webp` | Research introductory scientific image | WebP derivative of existing `Growth_Cone_2.jpeg` repository asset | Original in-image credit to Dr William A. Harris retained; no claim that it is Lin Lab data |
+| `images/web/ipsc-differentiation-rail.webp` | Research decorative process rail | WebP derivative of user-supplied `homepage_figure.zip` material | Empty alt and no added caption or scientific claim |
 
 Existing repository presence establishes that an asset was previously deployed, not that every derivative or new use is legally cleared. The first implementation may use low-risk layout placeholders or already-published assets while the release ledger remains explicit.
 

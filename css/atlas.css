@@ -676,6 +676,8 @@ h1,
 .research-intro-v3 figure img { display: block; height: clamp(16rem, 27vw, 28rem); object-fit: cover; object-position: 72% 62%; width: 100%; }
 .research-intro-v3 h1 { letter-spacing: -0.07em; }
 .research-intro-v3 p { color: var(--blue); font-size: clamp(1.05rem, 1.65vw, 1.35rem); margin-top: 1rem; }
+.research-intro-v3 .research-intro__harris { background: var(--ink); }
+.research-intro-v3 .research-intro__harris img { aspect-ratio: 785 / 542; height: auto; object-fit: contain; object-position: center; }
 
 .research-essay { border-bottom: 1px solid var(--media-rule); }
 .research-essay__inner { align-items: center; display: grid; gap: clamp(2.5rem, 6vw, 7rem); grid-template-columns: minmax(14rem, 0.65fr) minmax(22rem, 1.35fr); margin: 0 auto; max-width: var(--content); padding: clamp(3.5rem, 8vw, 7rem) var(--page-pad); }
@@ -691,6 +693,8 @@ h1,
 .research-essay figure { margin: 0; }
 .research-essay figure img { display: block; height: clamp(18rem, 32vw, 33rem); object-fit: cover; width: 100%; }
 .research-essay figcaption { color: var(--slate); font-size: 0.72rem; margin-top: 0.65rem; }
+.research-essay--text-led .research-essay__inner { grid-template-columns: 1fr; }
+.research-essay--text-led .research-essay__copy { max-width: 44rem; }
 .research-essay--ink { background: var(--ink); border: 0; }
 .research-essay--ink .research-essay__inner { grid-template-columns: minmax(22rem, 1.35fr) minmax(14rem, 0.65fr); }
 .research-essay--ink .research-essay__copy { grid-column: 2; grid-row: 1; }
@@ -704,6 +708,8 @@ h1,
 
 .research-visual-rail { margin: 0 auto; max-width: var(--content); padding: clamp(2rem, 5vw, 4.25rem) var(--page-pad); }
 .research-visual-rail img { border: 1px solid var(--media-rule); display: block; height: auto; width: 100%; }
+.research-process-rail { background: var(--paper-deep); margin: 0 auto; max-width: var(--content); padding: clamp(1rem, 2.3vw, 1.8rem) var(--page-pad); }
+.research-process-rail img { background: var(--white); border: 1px solid var(--media-rule); display: block; height: auto; width: 100%; }
 .research-video-archive { background: var(--paper-deep); }
 .research-video-archive__inner { display: grid; gap: clamp(1.25rem, 3vw, 2.5rem); grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0 auto; max-width: var(--content); padding: clamp(3rem, 6vw, 5rem) var(--page-pad); }
 .research-video-archive h2 { color: var(--ink); font-size: clamp(1.55rem, 2.4vw, 2.25rem); grid-column: 1 / -1; margin: 0 0 0.5rem; }

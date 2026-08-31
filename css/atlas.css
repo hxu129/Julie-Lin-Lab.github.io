@@ -643,6 +643,10 @@ h1,
 .home-publication__inner { align-items: center; display: grid; gap: clamp(2rem, 6vw, 7rem); grid-template-columns: minmax(18rem, 1fr) minmax(20rem, 1fr); margin: 0 auto; max-width: var(--content); min-height: 28rem; padding: clamp(3rem, 7vw, 6rem) var(--page-pad); }
 .home-publication__art { align-self: stretch; margin: -1.5rem 0; overflow: hidden; }
 .home-publication__art img { display: block; height: 100%; min-height: 20rem; object-fit: cover; object-position: left center; width: 100%; }
+.home-publication__art--paper { align-items: center; display: flex; flex-direction: column; justify-content: center; margin: 0; overflow: visible; }
+.home-publication__art--paper a { background: var(--white); display: block; max-width: 26rem; padding: clamp(0.55rem, 1.2vw, 0.9rem); width: 100%; }
+.home-publication__art--paper img { height: auto; min-height: 0; object-fit: contain; width: 100%; }
+.home-publication__art--paper figcaption { color: var(--blue-light); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.65rem; letter-spacing: 0.025em; margin-top: 0.85rem; }
 .section-label { color: var(--copper); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; margin: 0 0 1rem !important; text-transform: uppercase; }
 .home-publication h2 { color: var(--white); font-family: 'Manrope', 'Noto Sans SC', sans-serif; font-size: clamp(1.7rem, 3vw, 3.15rem); font-weight: 500; letter-spacing: -0.06em; line-height: 1.03; margin: 0 0 1rem; }
 .home-publication__copy > p:not(.section-label) { color: var(--blue-light); font-size: 0.9rem; margin: 0 0 1.2rem; }
@@ -727,6 +731,29 @@ h1,
 .archive-tail { background: var(--paper-deep); }
 .archive-tail__inner { margin: 0 auto; max-width: var(--content); padding: clamp(3rem, 6vw, 5rem) var(--page-pad); }
 
+.publication-intro { border-bottom: 1px solid var(--media-rule); margin: 0 auto; max-width: var(--content); padding: clamp(3rem, 7vw, 6rem) var(--page-pad) clamp(2rem, 4vw, 3.5rem); position: relative; }
+.publication-intro::after { background: var(--copper); border-radius: 50%; bottom: -3px; content: ''; height: 5px; position: absolute; right: var(--page-pad); width: 5px; }
+.publication-intro h1 { color: var(--ink); font-family: 'Manrope', 'Noto Sans SC', sans-serif; font-size: clamp(2.7rem, 5vw, 4.6rem); font-weight: 600; letter-spacing: -0.075em; line-height: 0.92; margin: 0; }
+.publication-main { margin: 0 auto; max-width: var(--content); padding: clamp(2.5rem, 6vw, 5rem) var(--page-pad) clamp(3rem, 6vw, 5.5rem); }
+.publication-feature { align-items: center; display: grid; gap: clamp(2.5rem, 7vw, 8rem); grid-template-columns: minmax(18rem, 0.9fr) minmax(20rem, 1.1fr); }
+.publication-figure { margin: 0; }
+.publication-figure img { background: var(--white); display: block; height: auto; object-fit: contain; width: 100%; }
+.publication-figure figcaption { color: var(--slate); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.65rem; letter-spacing: 0.025em; line-height: 1.35; margin-top: 0.8rem; }
+.publication-figure figcaption a { text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); text-underline-offset: 0.2em; }
+.publication-figure--full { border: 1px solid var(--media-rule); max-width: 34rem; padding: clamp(0.65rem, 1.3vw, 1.05rem); }
+.publication-feature__copy { max-width: 42rem; }
+.publication-feature__copy h2 { color: var(--ink); font-family: 'Manrope', 'Noto Sans SC', sans-serif; font-size: clamp(1.85rem, 2.75vw, 2.9rem); font-weight: 600; letter-spacing: -0.065em; line-height: 1.05; margin: 0 0 1.2rem; }
+.publication-feature__copy > p:not(.section-label) { color: var(--slate); font-size: 0.9rem; line-height: 1.65; margin: 0 0 1.4rem; }
+.publication-key { margin-left: auto; max-width: 56rem; padding-top: clamp(3.5rem, 7vw, 6.5rem); }
+.publication-archive { background: var(--ink); color: var(--white); }
+.publication-archive__inner { align-items: center; display: grid; gap: clamp(2.5rem, 7vw, 8rem); grid-template-columns: minmax(19rem, 0.85fr) minmax(17rem, 1.15fr); margin: 0 auto; max-width: var(--content); padding: clamp(3.5rem, 7vw, 6rem) var(--page-pad); }
+.publication-archive__copy { max-width: 37rem; }
+.publication-archive__copy h2 { color: var(--white); font-family: 'Manrope', 'Noto Sans SC', sans-serif; font-size: clamp(1.85rem, 2.8vw, 3rem); font-weight: 500; letter-spacing: -0.06em; line-height: 1.05; margin: 0 0 1.15rem; }
+.publication-archive__copy > p:not(.section-label) { color: var(--blue-light); font-size: 0.9rem; line-height: 1.65; margin: 0 0 1.4rem; }
+.publication-archive .media-link { color: var(--white); }
+.publication-figure--archive { background: var(--paper); border: 1px solid rgba(245, 241, 232, 0.32); justify-self: end; max-width: 29rem; padding: clamp(0.6rem, 1.3vw, 1rem); }
+.publication-figure--archive figcaption { color: var(--blue-light); }
+
 .people-intro { align-items: end; display: grid; gap: 2rem; grid-template-columns: minmax(12rem, 0.55fr) minmax(20rem, 1.45fr); }
 .people-intro p { margin: 0 0 0.35rem; }
 .people-photo { margin: 0; }
@@ -783,6 +810,8 @@ h1,
   .home-hero__inner,
   .home-evidence__inner,
   .home-publication__inner,
+  .publication-feature,
+  .publication-archive__inner,
   .research-intro-v2,
   .research-evidence__inner,
   .research-essay__inner,
@@ -797,6 +826,10 @@ h1,
   .home-hero__figure--field-note { min-height: 22rem; }
   .home-publication__art { margin: 0; }
   .home-publication__art img { min-height: 18rem; }
+  .home-publication__art--paper img { min-height: 0; }
+  .publication-figure--full,
+  .publication-figure--archive { justify-self: start; }
+  .publication-key { margin-left: 0; }
   .home-evidence__image img,
   .research-evidence figure img { max-height: none; }
   .home-research__item { grid-template-columns: 3.8rem minmax(11rem, 1fr) minmax(10rem, 0.7fr); }

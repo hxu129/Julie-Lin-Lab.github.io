@@ -34,6 +34,15 @@ The accepted evidence-stage composition is a single dark, rounded editorial fram
 - No image title, channel identity, biological interpretation, disease label, model claim, experimental result, or project attribution is added until Ann confirms it.
 - The stage appears on Home and Research to connect visual confidence with a path to the full canonical research description.
 
+## Revision 5 — Publication figures as primary evidence
+
+Publication imagery must be drawn from the paper record, not from decorative lab art. Each image receives a geometry selected from the scientific figure itself: a multi-panel figure remains complete inside a paper-sheet frame (`object-fit: contain`); a self-contained graphical abstract remains whole in a square frame. No panel is silently cropped merely to fill a visual container.
+
+- The Home publication feature uses the existing repository EMBO mechanism figure at its natural square ratio, with a compact CC BY 4.0 credit.
+- The Publications page presents the complete Figure 1 from the 2023 EMBO Journal article and the complete graphical abstract from the 2019 Cell article; both sources were checked as CC BY 4.0 before use.
+- Captions link to the DOI and identify the figure type, journal, and license. They are attribution, not a new interpretation of the data.
+- Publication layout uses a restrained paper field for the detailed multi-panel result and a separate midnight archive band for the graphical abstract, preventing page-to-page repetition while keeping one visual system.
+
 ## Release content and asset contract
 
 - `main` is the sole source of truth for visible research, publication, people, news, recruitment, and contact content. A visual re-layout may split source text into semantic HTML, but must not introduce a claim, omit a source fact, or paraphrase it into a different assertion.
@@ -105,6 +114,8 @@ The focal question remains the laboratory's own established framing:
 | `images/illustrations/rna-field-notes-research.webp` | Research/People/Profile decorative illustration | Generated original field-note art, WebP derivative | Decorative only; empty alt; no scientific, personnel, or event claim |
 | `images/web/research-ann-culture.webp` | Home/Research real-image evidence stage | User-supplied from `Ann--胶质瘤.zip`; WebP derivative of one original TIFF | Caption only credits Ann Cloos; no scientific interpretation until metadata is confirmed |
 | `images/web/julie-profile.webp` | PI profile portrait | WebP derivative of existing repository portrait | Use only for Julie’s profile; do not generate or substitute identity imagery |
+| `images/web/paper-embj-2023-figure1.webp` | Publications selected-paper evidence | Complete Figure 1 rendered from the CC BY 4.0 EMBO Journal 2023 PDF, DOI `10.15252/embj.2022113168` | All panels retained; linked figure credit; no interpretation added |
+| `images/web/paper-cell-2019-graphical-abstract.webp` | Publications archive evidence | Complete CC BY 4.0 graphical abstract from the 2019 Cell article, DOI `10.1016/j.cell.2018.11.030` | Natural square ratio retained; linked figure credit; no interpretation added |
 
 Existing repository presence establishes that an asset was previously deployed, not that every derivative or new use is legally cleared. The first implementation may use low-risk layout placeholders or already-published assets while the release ledger remains explicit.
 

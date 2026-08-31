@@ -51,6 +51,10 @@ The Research page should not reuse the same generated illustration for every cha
 - The iPSC montage is the user-supplied visual material previously specified as decorative only. It has an empty alternative text and no added caption, title, condition, model, result, or claim.
 - This removes one redundant generated figure, while retaining the remaining field-note illustrations as explicitly decorative atmosphere.
 
+## Revision 7 — Reality-first Home
+
+The Home hero is the appropriate final place to shift the site toward real imagery: it uses the full vertical Chiasm image, credited to Dr William A. Harris, rather than a generated illustration. Its portrait geometry is preserved with `object-fit: contain`; the source's own in-image credit remains visible. The three small Research-row field-note crops remain decorative navigation aids, while every major Home visual now has a distinct real role: scientific image, lab microscopy, paper figure, event photography, or team photo.
+
 ## Release content and asset contract
 
 - `main` is the sole source of truth for visible research, publication, people, news, recruitment, and contact content. A visual re-layout may split source text into semantic HTML, but must not introduce a claim, omit a source fact, or paraphrase it into a different assertion.
@@ -126,6 +130,7 @@ The focal question remains the laboratory's own established framing:
 | `images/web/paper-cell-2019-graphical-abstract.webp` | Publications archive evidence | Complete CC BY 4.0 graphical abstract from the 2019 Cell article, DOI `10.1016/j.cell.2018.11.030` | Natural square ratio retained; linked figure credit; no interpretation added |
 | `images/web/growth-cone-harris.webp` | Research introductory scientific image | WebP derivative of existing `Growth_Cone_2.jpeg` repository asset | Original in-image credit to Dr William A. Harris retained; no claim that it is Lin Lab data |
 | `images/web/ipsc-differentiation-rail.webp` | Research decorative process rail | WebP derivative of user-supplied `homepage_figure.zip` material | Empty alt and no added caption or scientific claim |
+| `images/web/chiasm-harris.webp` | Home hero scientific image | WebP derivative of existing `Chiasm.jpeg` repository asset | Existing source record credits Dr William A. Harris; presented whole with no claim that it is Lin Lab data |
 
 Existing repository presence establishes that an asset was previously deployed, not that every derivative or new use is legally cleared. The first implementation may use low-risk layout placeholders or already-published assets while the release ledger remains explicit.
 

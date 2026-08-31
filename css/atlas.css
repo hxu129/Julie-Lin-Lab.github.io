@@ -605,6 +605,8 @@ h1,
 .home-hero__figure img { display: block; height: clamp(22rem, 38vw, 39rem); object-fit: cover; width: 100%; }
 .home-hero__figure--field-note { align-self: stretch; overflow: hidden; }
 .home-hero__figure--field-note img { height: 100%; min-height: 24rem; object-position: 60% center; }
+.home-hero__figure--scientific { align-self: center; justify-self: end; max-width: 28rem; width: 100%; }
+.home-hero__figure--scientific img { height: auto; object-fit: contain; width: 100%; }
 
 .home-section-heading { align-items: baseline; display: flex; gap: 2rem; justify-content: space-between; margin-bottom: 2.6rem; }
 .home-section-heading h2 { color: var(--ink); font-size: clamp(2.25rem, 4vw, 4.2rem); letter-spacing: -0.06em; margin: 0; }
@@ -830,6 +832,7 @@ h1,
   .research-essay--ink .research-essay__inner { grid-template-columns: 1fr; }
   .home-hero__inner { min-height: auto; }
   .home-hero__figure--field-note { min-height: 22rem; }
+  .home-hero__figure--scientific { justify-self: start; }
   .home-publication__art { margin: 0; }
   .home-publication__art img { min-height: 18rem; }
   .home-publication__art--paper img { min-height: 0; }

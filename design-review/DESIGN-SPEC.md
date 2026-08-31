@@ -25,6 +25,15 @@ The release now follows a more legible visual contract, informed by contemporary
 6. **Image quality is a performance budget.** Core rendered images use correctly sized WebP derivatives; original source files remain untouched. A sub-megabyte homepage media budget is preferable to a gallery of full-size JPEG/PNG downloads.
 7. **A click must not leave the system.** English personal profile pages replace the legacy Colorlib shell with the same header, responsive menu, typography, art treatment, and footer as the redesigned site while preserving their original biographical content.
 
+## Revision 4 — Real evidence stage
+
+The accepted evidence-stage composition is a single dark, rounded editorial frame containing one unaltered real research image and one paper information panel. It is the only rounded major container in the system. Field-note art may frame the site, but it must yield to a real image when the page needs to demonstrate that laboratory work is happening.
+
+- The real image retains its original colour channels; those colours are not promoted into interface tokens.
+- The visible copy is restricted to an existing source-grounded statement of research systems and an image-credit line.
+- No image title, channel identity, biological interpretation, disease label, model claim, experimental result, or project attribution is added until Ann confirms it.
+- The stage appears on Home and Research to connect visual confidence with a path to the full canonical research description.
+
 ## Release content and asset contract
 
 - `main` is the sole source of truth for visible research, publication, people, news, recruitment, and contact content. A visual re-layout may split source text into semantic HTML, but must not introduce a claim, omit a source fact, or paraphrase it into a different assertion.
@@ -94,6 +103,8 @@ The focal question remains the laboratory's own established framing:
 | `images/illustrations/rna-field-notes-hero.webp` | Home/Research decorative illustration | Generated original field-note art, WebP derivative | Decorative only; empty alt; no scientific, personnel, or event claim |
 | `images/illustrations/rna-field-notes-nocturne.webp` | Home/Publications decorative dark band | Generated original field-note art, WebP derivative | Decorative only; empty alt; no scientific, personnel, or event claim |
 | `images/illustrations/rna-field-notes-research.webp` | Research/People/Profile decorative illustration | Generated original field-note art, WebP derivative | Decorative only; empty alt; no scientific, personnel, or event claim |
+| `images/web/research-ann-culture.webp` | Home/Research real-image evidence stage | User-supplied from `Ann--胶质瘤.zip`; WebP derivative of one original TIFF | Caption only credits Ann Cloos; no scientific interpretation until metadata is confirmed |
+| `images/web/julie-profile.webp` | PI profile portrait | WebP derivative of existing repository portrait | Use only for Julie’s profile; do not generate or substitute identity imagery |
 
 Existing repository presence establishes that an asset was previously deployed, not that every derivative or new use is legally cleared. The first implementation may use low-risk layout placeholders or already-published assets while the release ledger remains explicit.
 

@@ -55,10 +55,26 @@ The Research page should not reuse the same generated illustration for every cha
 
 The Home hero is the appropriate final place to shift the site toward real imagery: it uses the full vertical Chiasm image, credited to Dr William A. Harris, rather than a generated illustration. Its portrait geometry is preserved with `object-fit: contain`; the source's own in-image credit remains visible. The three small Research-row field-note crops remain decorative navigation aids, while every major Home visual now has a distinct real role: scientific image, lab microscopy, paper figure, event photography, or team photo.
 
+## Revision 8 — Lab archive imagery and quiet credits
+
+The user has authorized all visual materials in `homepage_figure.zip` for site use. The Home hero now uses the archive's high-resolution `cut.jpg` derivative because its deep blue-green source palette supports the existing visual system without turning image-channel colours into UI colours. The smaller iPSC rail and Home hero use the same unobtrusive lower-right `Lin Lab image archive` credit treatment.
+
+- The credit identifies source stewardship, not a named experiment, tissue, channel, organism, result, or claim.
+- The original source images remain unaltered; web derivatives reduce transfer size only.
+- This supersedes Revision 7's active Home-hero selection. The credited Chiasm image remains an approved reserve asset, not an active Home claim.
+
+## Revision 9 — Archive atlas, not image wallpaper
+
+The remaining visually distinctive, user-authorized materials from `homepage_figure.zip` are now given separate roles rather than being concentrated in a single hero or repeated as a gallery. This makes the English site feel materially connected to laboratory practice without turning the archive into asserted evidence.
+
+- **Research** moves from process rail to three full, uncropped archive images: a spheroid image beside techniques, a magenta image on the dark regulation chapter, and a dual-channel image beside the health chapter. Their source channels stay inside the images; no fluorescent colour becomes interface chrome.
+- **People** opens its group portrait with a small monochrome archive inset, while **Join Us** carries a light microscopy inset inside the contact block. These are visual atmosphere only, not a claim about a person, recruitment project, cell type, or result.
+- All archive captions use the same small lower-right source label. The two identical iPSC process exports are intentionally represented once.
+
 ## Release content and asset contract
 
 - `main` is the sole source of truth for visible research, publication, people, news, recruitment, and contact content. A visual re-layout may split source text into semantic HTML, but must not introduce a claim, omit a source fact, or paraphrase it into a different assertion.
-- The user-supplied `homepage_figure.zip` is a visual source only. Its iPSC differentiation montage is retained in the repository but is not active in Revision 3; if it returns, it must remain decorative with empty alternative text and no added caption or research claim.
+- The user has authorized all imagery in `homepage_figure.zip` for visual use. Archive-derived images retain a small `Lin Lab image archive` credit and must not receive an added caption that asserts an experiment, tissue, channel, organism, result, or project claim.
 - Existing source images may be re-cropped or reordered for visual hierarchy, but their placement must not imply a new result, project, affiliation, or event.
 - Generated layout mockups are review references only. The three deployed `rna-field-notes-*.webp` illustrations are original decorative artwork; they must never be presented as research images, publication figures, experimental evidence, or scientific claims.
 
@@ -130,7 +146,13 @@ The focal question remains the laboratory's own established framing:
 | `images/web/paper-cell-2019-graphical-abstract.webp` | Publications archive evidence | Complete CC BY 4.0 graphical abstract from the 2019 Cell article, DOI `10.1016/j.cell.2018.11.030` | Natural square ratio retained; linked figure credit; no interpretation added |
 | `images/web/growth-cone-harris.webp` | Research introductory scientific image | WebP derivative of existing `Growth_Cone_2.jpeg` repository asset | Original in-image credit to Dr William A. Harris retained; no claim that it is Lin Lab data |
 | `images/web/ipsc-differentiation-rail.webp` | Research decorative process rail | WebP derivative of user-supplied `homepage_figure.zip` material | Empty alt and no added caption or scientific claim |
-| `images/web/chiasm-harris.webp` | Home hero scientific image | WebP derivative of existing `Chiasm.jpeg` repository asset | Existing source record credits Dr William A. Harris; presented whole with no claim that it is Lin Lab data |
+| `images/web/chiasm-harris.webp` | Reserve scientific image | WebP derivative of existing `Chiasm.jpeg` repository asset | Existing source record credits Dr William A. Harris; not active on Home |
+| `images/web/lab-archive-cut.webp` | Home hero research image | 1600px WebP derivative of `homepage_figure.zip` `cut.jpg` | Small Lin Lab image archive credit; no scientific interpretation added |
+| `images/web/lab-archive-spheroid.webp` | Research technique chapter image | WebP derivative of user-authorized `homepage_figure.zip` archive material | Small Lin Lab image archive credit; whole source geometry; no scientific interpretation added |
+| `images/web/lab-archive-magenta.webp` | Research regulation chapter image | WebP derivative of user-authorized `homepage_figure.zip` archive material | Small Lin Lab image archive credit; source colour stays inside image; no scientific interpretation added |
+| `images/web/lab-archive-dual-channel.webp` | Research health chapter image | WebP derivative of user-authorized `homepage_figure.zip` archive material | Small Lin Lab image archive credit; whole source geometry; no scientific interpretation added |
+| `images/web/lab-archive-neuron-mono.webp` | People introduction inset | WebP derivative of user-authorized `homepage_figure.zip` archive material | Small Lin Lab image archive credit; atmosphere only, no personnel or scientific claim |
+| `images/web/lab-archive-neuron-light.webp` | Join Us contact inset | WebP derivative of user-authorized `homepage_figure.zip` archive material | Small Lin Lab image archive credit; atmosphere only, no recruitment or scientific claim |
 
 Existing repository presence establishes that an asset was previously deployed, not that every derivative or new use is legally cleared. The first implementation may use low-risk layout placeholders or already-published assets while the release ledger remains explicit.
 

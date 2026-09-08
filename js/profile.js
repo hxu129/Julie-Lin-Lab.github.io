@@ -35,12 +35,39 @@
     'about_zixin.html': { name: 'Zixin Sun', role: 'PhD Student' }
   };
 
+  const refreshedProfiles = {
+    'about_linkuo.html': 'linkuo-shang',
+    'about_menglin.html': 'menglin-dai',
+    'about_quanying.html': 'quanying-mi',
+    'about_rui.html': 'rui-feng',
+    'about_shuhan.html': 'shuhan-shen',
+    'about_xuanxuan.html': 'xuanxuan-tang',
+    'about_yaping.html': 'yaping-wu',
+    'about_zixin.html': 'zixin-sun',
+    'about_linkuo_zh.html': 'linkuo-shang',
+    'about_menglin_zh.html': 'menglin-dai',
+    'about_quanying_zh.html': 'quanying-mi',
+    'about_rui_zh.html': 'rui-feng',
+    'about_shuhan_zh.html': 'shuhan-shen',
+    'about_xuanxuan_zh.html': 'xuanxuan-tang',
+    'about_yaping_zh.html': 'yaping-wu',
+    'about_zixin_zh.html': 'zixin-sun'
+  };
+
   document.addEventListener('DOMContentLoaded', () => {
+    const fileName = window.location.pathname.split('/').pop();
+    const refreshedId = refreshedProfiles[fileName];
+    if (refreshedId) {
+      const chinese = fileName.endsWith('_zh.html');
+      window.location.replace(`profile.html?member=${encodeURIComponent(refreshedId)}${chinese ? '&lang=zh' : ''}`);
+      return;
+    }
+
     const legacyMain = document.querySelector('#colorlib-main');
     const nameElement = legacyMain?.querySelector('h1');
     if (!legacyMain || !nameElement) return;
 
-    const record = canonicalProfiles[window.location.pathname.split('/').pop()] || {};
+    const record = canonicalProfiles[fileName] || {};
     const name = record.name || nameElement.textContent.trim();
     const role = record.role || (document.title.split('|')[1] || 'Lab member').trim();
     const isPrincipalInvestigator = window.location.pathname.endsWith('/about_Julie.html');

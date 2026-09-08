@@ -6,8 +6,10 @@
     <meta name="theme-color" content="#f5f1e8">
     <meta name="description" content="People in Lin Lab.">
     <title>People — Lin Lab</title>
-    <link rel="stylesheet" href="css/atlas.css?v=20260831-archive-atlas">
+    <link rel="stylesheet" href="css/atlas.css?v=20260908-people">
     <script src="js/atlas.js" defer></script>
+    <script src="js/people-data.js" defer></script>
+    <script src="js/people-directory.js" defer></script>
   </head>
   <body class="site-body site-body--people">
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -15,16 +17,16 @@
 
     <main id="main-content">
       <section class="people-intro reveal" aria-labelledby="people-title"><h1 id="people-title">People</h1><figure class="people-intro__archive archive-asset"><img src="images/web/lab-archive-neuron-mono.webp" alt="" width="922" height="922" loading="lazy"><figcaption>Lin Lab image archive</figcaption></figure></section>
-      <figure class="people-photo reveal"><img src="images/web/team.webp" alt="" width="1600" height="1200" fetchpriority="high"></figure>
-      <div class="people-directory">
-        <section class="reveal"><h2>Principal Investigator</h2><a href="about_Julie.html"><strong>Julie Qiaojin Lin, Ph.D.</strong><span>Assistant Professor</span></a></section>
-        <section class="reveal"><h2>PhD Students</h2><a href="about_xuanxuan.html"><strong>Xuanxuan Tang</strong><span>PhD Student</span></a><a href="about_zixin.html"><strong>Zixin Sun</strong><span>PhD Student</span></a><a href="about_shuhan.html"><strong>Shuhan Shen</strong><span>PhD Student</span></a><a href="about_rui.html"><strong>Rui Feng</strong><span>PhD Student</span></a><a href="about_yaping.html"><strong>Yaping Wu</strong><span>PhD Student</span></a><a href="about_linkuo.html"><strong>Linkuo Shang</strong><span>PhD Student</span></a><a href="about_menglin.html"><strong>Menglin Dai</strong><span>PhD Student</span></a><a href="mailto:acloos388@connect.hkust-gz.edu.cn"><strong>Ann Cloos</strong><span>PhD Student</span></a></section>
-        <section class="reveal"><h2>MPhil Students</h2><div class="people-directory__entry"><strong>Quanying Mi</strong><span>MPhil Student</span></div><a href="about_yihua.html"><strong>Yihua Gao</strong><span>MPhil Student</span></a><a href="about_yi.html"><strong>Yi Hu</strong><span>MPhil Student</span></a></section>
-        <section class="reveal"><h2>Research Assistant</h2><a href="mailto:meifenzheng@hkust-gz.edu.cn"><strong>Meifen Zheng</strong><span>Research Assistant</span></a></section>
-        <section class="reveal"><h2>Affiliated Researcher</h2><a href="about.html"><strong>Jianning Kang</strong><span>PhD Student (Tsinghua University), Web Developer</span></a></section>
-        <section class="reveal"><h2>Collaborator</h2><div class="people-directory__entry"><strong>Prof Christine Holt</strong><span>University of Cambridge, UK</span></div><div class="people-directory__entry"><strong>Prof Giovanna Mallucci</strong><span>Altos Labs, UK</span></div><div class="people-directory__entry"><strong>Prof Jernej Ule</strong><span>UK DRI at King's College London, UK</span></div><div class="people-directory__entry"><strong>Dr Flora CY Lee</strong><span>King's College London, UK</span></div><div class="people-directory__entry"><strong>Dr Marc-David Ruepp</strong><span>UK DRI at King's College London, UK</span></div><div class="people-directory__entry"><strong>Dr Deepak Khuperkar</strong><span>UK DRI at King's College London, UK</span></div><div class="people-directory__entry"><strong>Prof Clemens Kaminski</strong><span>University of Cambridge, UK</span></div><div class="people-directory__entry"><strong>Dr Emmanouil Metzakoipian</strong><span>bit.bio, UK</span></div><div class="people-directory__entry"><strong>Prof Peter St George-Hyslop</strong><span>University of Cambridge, UK</span></div><div class="people-directory__entry"><strong>Dr Nicholas Clifton</strong><span>University of Exeter, UK</span></div><div class="people-directory__entry"><strong>Prof Anna King</strong><span>University of Tasmania, Australia</span></div></section>
-        <section class="reveal"><h2>Other</h2><a href="https://www.zcool.com.cn/u/15227315"><strong>Chan Li</strong><span>Invited Guest Illustrator</span></a></section>
-      </div>
+      <figure class="people-photo reveal"><img src="images/web/team.webp" alt="Members of Lin Lab gathered for a meal" width="1600" height="1200" fetchpriority="high"></figure>
+      <section class="people-roster reveal" aria-label="Lab members">
+        <section class="people-group people-group--pi"><h2 class="people-group__title">Principal Investigator</h2><div class="people-group__grid"><a class="people-person" href="about_Julie.html" aria-label="Read Julie Qiaojin Lin's profile"><figure class="people-person__portrait"><img src="images/web/julie-profile.webp" alt="Portrait of Julie Qiaojin Lin" width="803" height="900" loading="lazy"></figure><span class="people-person__caption"><strong>Julie Qiaojin Lin, Ph.D.</strong><span>Assistant Professor</span></span></a></div></section>
+        <div data-people-directory></div>
+      </section>
+      <section class="people-network reveal" aria-label="Research network">
+        <div class="people-network__group"><h2>Affiliated Researcher</h2><a href="about.html"><strong>Jianning Kang</strong><span>PhD Student (Tsinghua University), Web Developer</span></a></div>
+        <div class="people-network__group people-network__group--wide"><h2>Collaborators</h2><div class="people-network__list"><span>Prof Christine Holt <small>University of Cambridge, UK</small></span><span>Prof Giovanna Mallucci <small>Altos Labs, UK</small></span><span>Prof Jernej Ule <small>UK DRI at King's College London, UK</small></span><span>Dr Flora CY Lee <small>King's College London, UK</small></span><span>Dr Marc-David Ruepp <small>UK DRI at King's College London, UK</small></span><span>Dr Deepak Khuperkar <small>UK DRI at King's College London, UK</small></span><span>Prof Clemens Kaminski <small>University of Cambridge, UK</small></span><span>Dr Emmanouil Metzakoipian <small>bit.bio, UK</small></span><span>Prof Peter St George-Hyslop <small>University of Cambridge, UK</small></span><span>Dr Nicholas Clifton <small>University of Exeter, UK</small></span><span>Prof Anna King <small>University of Tasmania, Australia</small></span></div></div>
+        <div class="people-network__group"><h2>Other</h2><a href="https://www.zcool.com.cn/u/15227315"><strong>Chan Li</strong><span>Invited Guest Illustrator</span></a></div>
+      </section>
     </main>
     <footer class="site-footer"><div class="site-footer__inner"><a class="wordmark" href="index.html">Lin Lab <small>Neuronal RNA Metabolism Lab<br>HKUST(GZ)</small></a><p>No.1 Du Xue Rd, Nansha District, Guangzhou<br><a href="mailto:qiaojinlin@hkust-gz.edu.cn">qiaojinlin@hkust-gz.edu.cn</a></p><div class="site-footer__links"><a href="research.html">Research</a><a href="publication.html">Publications</a><a href="contact.html">Join us</a></div></div></footer>
   </body>

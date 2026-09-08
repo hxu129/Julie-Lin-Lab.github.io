@@ -71,6 +71,14 @@ The remaining visually distinctive, user-authorized materials from `homepage_fig
 - **People** opens its group portrait with a small monochrome archive inset, while **Join Us** carries a light microscopy inset inside the contact block. These are visual atmosphere only, not a claim about a person, recruitment project, cell type, or result.
 - All archive captions use the same small lower-right source label. The two identical iPSC process exports are intentionally represented once.
 
+## Revision 10 — Portrait index and member dossiers
+
+The People pages move from a text-only directory plus legacy template pages to a current, source-backed portrait index. The supplied personnel workbook is the active source for the listed members' names, roles, English and Chinese biographies, education, professional email addresses, and the one supplied public-profile link. The old collaborators and invited illustrator remain visible as a separate network because they are not part of that workbook.
+
+- **Index first, reading second.** The English and Chinese People pages group members by their supplied current role and show only a photograph, name, and role in the index. This gives the page a clear visual rhythm rather than making visitors read 17 biographies at once.
+- **One consistent dossier.** Every portrait opens a bilingual, responsive profile route with the supplied biography, education, professional email, and any supplied academic link. Existing legacy English and Chinese profile URLs for the refreshed members redirect to this route, preventing an outdated visual shell from becoming the primary experience.
+- **Portraits are records of people, not research evidence.** WebP derivatives preserve the supplied photographs without AI generation, retouching, or scientific attribution. One supplied Meifen Zheng file is a composite rather than a single-person portrait, so the previously deployed individual portrait remains in use until a replacement is supplied.
+
 ## Release content and asset contract
 
 - `main` is the sole source of truth for visible research, publication, people, news, recruitment, and contact content. A visual re-layout may split source text into semantic HTML, but must not introduce a claim, omit a source fact, or paraphrase it into a different assertion.
@@ -153,6 +161,7 @@ The focal question remains the laboratory's own established framing:
 | `images/web/lab-archive-dual-channel.webp` | Research health chapter image | WebP derivative of user-authorized `homepage_figure.zip` archive material | Small Lin Lab image archive credit; whole source geometry; no scientific interpretation added |
 | `images/web/lab-archive-neuron-mono.webp` | People introduction inset | WebP derivative of user-authorized `homepage_figure.zip` archive material | Small Lin Lab image archive credit; atmosphere only, no personnel or scientific claim |
 | `images/web/lab-archive-neuron-light.webp` | Join Us contact inset | WebP derivative of user-authorized `homepage_figure.zip` archive material | Small Lin Lab image archive credit; atmosphere only, no recruitment or scientific claim |
+| `images/web/people/*.webp` | People portrait index and member dossiers | WebP derivatives of user-supplied `个人信息及照片.zip` photographs, except the retained existing Meifen Zheng portrait | Identifies people only; preserves supplied name/role biography fields without AI generation or added claims |
 
 Existing repository presence establishes that an asset was previously deployed, not that every derivative or new use is legally cleared. The first implementation may use low-risk layout placeholders or already-published assets while the release ledger remains explicit.
 

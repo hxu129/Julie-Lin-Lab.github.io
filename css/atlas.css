@@ -791,6 +791,31 @@ h1,
 .people-directory strong { display: block; font-size: 0.9rem; letter-spacing: -0.02em; }
 .people-directory span { color: var(--slate); display: block; font-size: 0.74rem; margin-top: 0.2rem; }
 
+.people-roster { margin: 0 auto; max-width: var(--content); padding: clamp(4rem, 8vw, 7rem) var(--page-pad); }
+.people-group { border-top: 1px solid var(--media-rule); display: grid; gap: clamp(1.8rem, 5vw, 5rem); grid-template-columns: minmax(10rem, 0.42fr) minmax(22rem, 1.58fr); padding: clamp(2rem, 5vw, 4rem) 0; }
+.people-group__title { color: var(--blue); font-size: clamp(1rem, 1.45vw, 1.35rem); letter-spacing: -0.035em; margin: 0; }
+.people-group__grid { display: grid; gap: clamp(1.35rem, 2.5vw, 2.4rem) clamp(0.9rem, 1.8vw, 1.7rem); grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.people-group--pi .people-group__grid { grid-template-columns: minmax(11rem, 17rem); }
+.people-person { display: block; min-width: 0; }
+.people-person__portrait { background: var(--ink); margin: 0; overflow: hidden; }
+.people-person__portrait img { aspect-ratio: 4 / 5; display: block; object-fit: cover; transition: transform 300ms ease; width: 100%; }
+.people-person:hover .people-person__portrait img { transform: scale(1.025); }
+.people-person__caption { border-top: 1px solid var(--media-rule); display: block; margin-top: 0.65rem; padding-top: 0.6rem; }
+.people-person__caption strong { color: var(--ink); display: block; font-size: clamp(0.84rem, 1.05vw, 0.98rem); letter-spacing: -0.035em; line-height: 1.18; }
+.people-person__caption span { color: var(--slate); display: block; font-size: 0.69rem; line-height: 1.35; margin-top: 0.28rem; }
+.people-network { border-top: 1px solid var(--media-rule); display: grid; gap: 0; grid-template-columns: 0.8fr 1.7fr 0.8fr; margin: 0 auto clamp(4rem, 8vw, 7rem); max-width: calc(var(--content) - (var(--page-pad) * 2)); }
+.people-network__group { border-left: 1px solid var(--media-rule); padding: 1.45rem; }
+.people-network__group:first-child { border-left: 0; padding-left: 0; }
+.people-network h2 { color: var(--blue); font-size: 0.92rem; letter-spacing: -0.025em; margin: 0 0 1rem; }
+.people-network a { border-top: 1px solid var(--media-rule); display: block; padding: 0.7rem 0; }
+.people-network a:hover strong { color: var(--blue); }
+.people-network strong,
+.people-network__list span { color: var(--ink); display: block; font-size: 0.84rem; letter-spacing: -0.02em; line-height: 1.35; }
+.people-network a span,
+.people-network__list small { color: var(--slate); display: block; font-size: 0.7rem; line-height: 1.35; margin-top: 0.2rem; }
+.people-network__list { display: grid; gap: 0 1.3rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.people-network__list span { border-top: 1px solid var(--media-rule); padding: 0.7rem 0; }
+
 .news-head { align-items: end; display: flex; justify-content: space-between; }
 .news-head p { margin: 0; max-width: 30rem; }
 .news-wrap { display: grid; gap: clamp(2rem, 5vw, 5rem); grid-template-columns: 4.5rem 1fr; margin: 0 auto; max-width: var(--content); padding: clamp(3rem, 7vw, 6rem) var(--page-pad); }
@@ -861,6 +886,9 @@ h1,
   .home-news__story--lead { grid-column: 1 / -1; }
   .people-directory { grid-template-columns: repeat(2, 1fr); }
   .people-intro__archive { justify-self: start; }
+  .people-group { grid-template-columns: 1fr; }
+  .people-network { grid-template-columns: 1fr 1fr; }
+  .people-network__group--wide { grid-column: 1 / -1; }
   .people-directory section:nth-child(2),
   .people-directory section:nth-child(6) { grid-column: auto; }
   .people-directory section:nth-child(3),
@@ -901,6 +929,12 @@ h1,
   .people-directory section:nth-child(6),
   .people-directory section:nth-child(7) { border-left: 0; border-top: 1px solid var(--media-rule); margin-top: 0; padding: 1.4rem 0; }
   .people-directory section:first-child { border-top: 0; }
+  .people-group__grid { gap: 1.5rem 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .people-network { display: block; margin-left: var(--page-pad); margin-right: var(--page-pad); }
+  .people-network__group,
+  .people-network__group:first-child { border-left: 0; border-top: 1px solid var(--media-rule); padding: 1.4rem 0; }
+  .people-network__group:first-child { border-top: 0; }
+  .people-network__list { grid-template-columns: 1fr; }
   .news-wrap { grid-template-columns: 1fr; }
   .news-years { border-bottom: 1px solid var(--media-rule); border-right: 0; display: flex; gap: 1.5rem; padding: 0 0 0.75rem; }
   .news-years span { margin: 0; }

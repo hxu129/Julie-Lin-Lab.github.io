@@ -42,12 +42,39 @@
 .profile-reading .ftco-social { display: flex; flex-wrap: wrap; gap: 0.9rem 1.25rem; list-style: none; margin: 1.5rem 0 0; padding: 0; }
 .profile-reading .ftco-social a { color: var(--blue); font-size: 0.78rem; font-weight: 700; }
 
+.member-hero { align-items: center; border-bottom: 1px solid var(--media-rule); display: grid; gap: clamp(2.5rem, 7vw, 8rem); grid-template-columns: minmax(17rem, 0.78fr) minmax(18rem, 1.22fr); margin: 0 auto; max-width: var(--content); min-height: clamp(26rem, 42vw, 40rem); padding: clamp(3rem, 7vw, 6.5rem) var(--page-pad); }
+.member-hero__copy { max-width: 34rem; }
+.member-hero__role { color: var(--blue); font-size: 0.73rem; font-weight: 700; letter-spacing: 0.08em; margin: 0 0 1rem; text-transform: uppercase; }
+.member-hero h1 { color: var(--ink); font-family: 'Manrope', 'Noto Sans SC', sans-serif; font-size: clamp(2.8rem, 5vw, 5rem); font-weight: 600; letter-spacing: -0.075em; line-height: 0.94; margin: 0; }
+.member-hero__alternate { color: var(--slate); font-size: 0.96rem; margin: 0.85rem 0 0; }
+.member-hero__portrait { align-self: stretch; background: var(--ink); margin: 0; min-height: 22rem; overflow: hidden; }
+.member-hero__portrait img { display: block; height: 100%; object-fit: contain; width: 100%; }
+.member-profile__detail { display: grid; gap: clamp(2.5rem, 7vw, 8rem); grid-template-columns: minmax(20rem, 1.35fr) minmax(15rem, 0.65fr); margin: 0 auto; max-width: var(--content); padding: clamp(3.5rem, 8vw, 7rem) var(--page-pad); }
+.member-profile__reading { max-width: 47rem; }
+.member-profile__reading h2,
+.member-profile__facts h2 { color: var(--ink); font-size: 1.05rem; letter-spacing: -0.03em; margin: 0 0 1rem; }
+.member-profile__reading p { color: var(--ink-soft); font-size: clamp(1rem, 1.25vw, 1.08rem); line-height: 1.75; margin: 0; white-space: pre-line; }
+.member-profile__facts { border-top: 1px solid var(--media-rule); }
+.member-profile__facts section { border-bottom: 1px solid var(--media-rule); padding: 1.05rem 0 1.2rem; }
+.member-profile__facts h2 { color: var(--blue); font-size: 0.76rem; letter-spacing: 0.06em; margin-bottom: 0.75rem; text-transform: uppercase; }
+.member-profile__facts ul { list-style: none; margin: 0; padding: 0; }
+.member-profile__facts li { color: var(--ink-soft); font-size: 0.83rem; line-height: 1.55; margin-top: 0.6rem; }
+.member-profile__facts li:first-child { margin-top: 0; }
+.member-profile__email,
+.member-profile__links a { color: var(--blue); font-size: 0.84rem; line-height: 1.5; overflow-wrap: anywhere; }
+.member-profile__links { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; }
+.member-profile__missing { margin: 0 auto; max-width: var(--content); min-height: 45vh; padding: clamp(4rem, 8vw, 7rem) var(--page-pad); }
+.member-profile__missing .profile-back { display: block; }
+
 @media (max-width: 860px) {
   .profile-hero,
-  .profile-content { grid-template-columns: 1fr; }
+  .profile-content,
+  .member-hero,
+  .member-profile__detail { grid-template-columns: 1fr; }
   .profile-hero { min-height: auto; }
   .profile-hero__art,
-  .profile-hero__portrait { min-height: 17rem; }
+  .profile-hero__portrait,
+  .member-hero__portrait { min-height: 17rem; }
   .profile-portrait { max-width: 12rem; }
 }
 

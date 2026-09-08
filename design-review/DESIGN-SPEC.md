@@ -79,6 +79,14 @@ The People pages move from a text-only directory plus legacy template pages to a
 - **One consistent dossier.** Every portrait opens a bilingual, responsive profile route with the supplied biography, education, professional email, and any supplied academic link. Existing legacy English and Chinese profile URLs for the refreshed members redirect to this route, preventing an outdated visual shell from becoming the primary experience.
 - **Portraits are records of people, not research evidence.** WebP derivatives preserve the supplied photographs without AI generation, retouching, or scientific attribution. One supplied Meifen Zheng file is a composite rather than a single-person portrait, so the previously deployed individual portrait remains in use until a replacement is supplied.
 
+## Revision 11 — People as a living research group
+
+The first portrait-index implementation still read like a contact directory: a small decorative microscopy inset, then an unrelated low-resolution meal photograph, then evenly weighted headshots. The revised People presentation has one actual human focal point at a time.
+
+- **Opening stage:** `All_2.jpg` is the selected high-resolution group photograph. Its evening campus composition is used whole enough to preserve the pictured members and building context, while the midnight title field remains a separate interface surface. It is presented as Lin Lab members outdoors at night, never as a complete census of the lab.
+- **PI stage:** Julie is no longer a small item in a grid. A single dark editorial panel establishes the PI's name and role beside the original portrait before the roster begins.
+- **Dossiers:** individual profiles use the same midnight editorial stage—identity on ink, portrait as the adjacent full-height image, detailed biography on paper—rather than the former detached, pale left-text/right-image template.
+
 ## Release content and asset contract
 
 - `main` is the sole source of truth for visible research, publication, people, news, recruitment, and contact content. A visual re-layout may split source text into semantic HTML, but must not introduce a claim, omit a source fact, or paraphrase it into a different assertion.
@@ -162,6 +170,7 @@ The focal question remains the laboratory's own established framing:
 | `images/web/lab-archive-neuron-mono.webp` | People introduction inset | WebP derivative of user-authorized `homepage_figure.zip` archive material | Small Lin Lab image archive credit; atmosphere only, no personnel or scientific claim |
 | `images/web/lab-archive-neuron-light.webp` | Join Us contact inset | WebP derivative of user-authorized `homepage_figure.zip` archive material | Small Lin Lab image archive credit; atmosphere only, no recruitment or scientific claim |
 | `images/web/people/*.webp` | People portrait index and member dossiers | WebP derivatives of user-supplied `个人信息及照片.zip` photographs, except the retained existing Meifen Zheng portrait | Identifies people only; preserves supplied name/role biography fields without AI generation or added claims |
+| `images/web/people-team-night.webp` | People opening stage | 2200px WebP derivative of existing `images/All_2.jpg` | Identifies only the pictured Lin Lab members; no claim that it includes every current member |
 
 Existing repository presence establishes that an asset was previously deployed, not that every derivative or new use is legally cleared. The first implementation may use low-risk layout placeholders or already-published assets while the release ledger remains explicit.
 

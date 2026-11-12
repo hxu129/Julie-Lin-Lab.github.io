@@ -2,6 +2,14 @@
 
 本分支交接实验室网站的视觉改版、成员资料整理与自助维护服务。接手请先阅读 [HANDOFF.md](HANDOFF.md)，其中包含完成范围、验证结果、已知限制和下一步操作。
 
+## 获取交接分支
+
+```sh
+git clone --branch codex/lab-site-handoff-2026-11-12 --single-branch \
+  https://github.com/hxu129/Julie-Lin-Lab.github.io.git lin-lab-site
+cd lin-lab-site
+```
+
 ## 本地查看网站
 
 在仓库根目录运行以下命令，然后打开 `http://127.0.0.1:8000/`。

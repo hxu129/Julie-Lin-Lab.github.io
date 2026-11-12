@@ -312,3 +312,384 @@ window.LIN_LAB_PEOPLE = [
     "objectPosition": "50% 22%"
   }
 ];
+
+// Alumni information.docx supplied on 2026-10-27; current-member records above are unchanged.
+window.LIN_LAB_ALUMNI = [
+  {
+    "id": "siqi-lan",
+    "name": "Siqi Lan",
+    "nameZh": "兰思琦",
+    "group": "interns",
+    "period": "Jun 2025 – Aug 2026",
+    "periodZh": "2025年6月 – 2026年8月",
+    "position": "Master student, South China University of Technology, Guangzhou, China",
+    "positionZh": "硕士生，华南理工大学"
+  },
+  {
+    "id": "jiahao-hu",
+    "name": "Jiahao Hu",
+    "nameZh": "胡家豪",
+    "group": "interns",
+    "period": "Jun 2025 – Jun 2026",
+    "periodZh": "2025年6月 – 2026年6月",
+    "position": "PhD student, Rowan University, USA",
+    "positionZh": "博士生，罗文大学（美国）"
+  },
+  {
+    "id": "wenjuan-zhang",
+    "name": "Wenjuan Zhang",
+    "nameZh": "张文娟",
+    "group": "interns",
+    "period": "Dec 2024 – Jun 2025",
+    "periodZh": "2024年12月 – 2025年6月",
+    "position": "MPhil student, HKUST(GZ), Guangzhou, China",
+    "positionZh": "研究型硕士生 (MPhil)，香港科技大学（广州）"
+  },
+  {
+    "id": "jiewen-chen",
+    "name": "Jiewen Chen",
+    "nameZh": "陈洁雯",
+    "group": "interns",
+    "period": "Oct 2024 – Mar 2025",
+    "periodZh": "2024年10月 – 2025年3月",
+    "position": "Master student, Southern University of Science and Technology, Shenzhen, China",
+    "positionZh": "硕士生，南方科技大学"
+  },
+  {
+    "id": "junkai-lin",
+    "name": "Junkai Lin",
+    "nameZh": "林隽楷",
+    "group": "interns",
+    "period": "Aug 2024 – Sep 2024",
+    "periodZh": "2024年8月 – 2024年9月",
+    "position": "MSc Student, Department of Mathematics, The Chinese University of Hong Kong, Hong Kong, China",
+    "positionZh": "理学硕士生 (MSc)，香港中文大学"
+  },
+  {
+    "id": "yan-ji",
+    "name": "Yan Ji",
+    "nameZh": "吉言",
+    "group": "interns",
+    "period": "Jun 2024 – Aug 2024",
+    "periodZh": "2024年6月 – 2024年8月",
+    "nextPosition": "RA, Harvard University, USA",
+    "nextPositionZh": "研究助理 (RA)，哈佛大学（美国）",
+    "position": "DPhil (PhD) student, University of Oxford, UK",
+    "positionZh": "博士生 (DPhil)，牛津大学（英国）"
+  },
+  {
+    "id": "guixin-li",
+    "name": "Guixin Li",
+    "nameZh": "李贵新",
+    "group": "assistants",
+    "period": "Dec 2025 – May 2026",
+    "periodZh": "2025年12月 – 2026年5月"
+  },
+  {
+    "id": "ziqi-xie",
+    "name": "Ziqi Xie",
+    "nameZh": "谢子琪",
+    "group": "assistants",
+    "period": "Oct 2024 – Feb 2026",
+    "periodZh": "2024年10月 – 2026年2月",
+    "profile": "about_ziqi.html",
+    "profileZh": "about_ziqi_zh.html"
+  },
+  {
+    "id": "mengfan-huang",
+    "name": "Mengfan Huang",
+    "nameZh": "黄梦凡",
+    "group": "assistants",
+    "period": "Aug 2023 – Jun 2024",
+    "periodZh": "2023年8月 – 2024年6月",
+    "position": "Shanghai Harborside Medical Technology Co., Ltd.",
+    "positionZh": "上海瀚赛医疗科技有限公司"
+  },
+  {
+    "id": "junhan-wu",
+    "name": "Junhan Wu",
+    "nameZh": "吴君涵",
+    "group": "undergraduates",
+    "period": "Sep 2025 – Jan 2026",
+    "periodZh": "2025年9月 – 2026年1月"
+  },
+  {
+    "id": "ruiqi-deng",
+    "name": "Ruiqi Deng",
+    "nameZh": "邓睿齐",
+    "group": "undergraduates",
+    "period": "Sep 2025 – Jan 2026",
+    "periodZh": "2025年9月 – 2026年1月"
+  },
+  {
+    "id": "junjie-li",
+    "name": "Junjie Li",
+    "nameZh": "李俊杰",
+    "group": "undergraduates",
+    "period": "Sep 2025 – Jan 2026",
+    "periodZh": "2025年9月 – 2026年1月"
+  },
+  {
+    "id": "jiaqi-li",
+    "name": "Jiaqi Li",
+    "nameZh": "李嘉琪",
+    "group": "undergraduates",
+    "period": "Jul 2024 – Aug 2024",
+    "periodZh": "2024年7月 – 2024年8月"
+  },
+  {
+    "id": "sze-lai",
+    "name": "Sze Lai",
+    "nameZh": "赖斯",
+    "group": "undergraduates",
+    "period": "Jul 2024 – Aug 2024",
+    "periodZh": "2024年7月 – 2024年8月"
+  }
+];
+
+// Same source; the final six collaborators retain existing site names and affiliations.
+window.LIN_LAB_COLLABORATORS = [
+  {
+    "name": "Jun Xia",
+    "nameZh": "夏军",
+    "group": "hkust",
+    "affiliation": "Thrust of Bioscience and Biomedical Engineering, Systems Hub, HKUST(GZ)",
+    "affiliationZh": "香港科技大学（广州）系统枢纽，生命科学与生物医学工程学域",
+    "href": "https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/XIA-Jun/jxia"
+  },
+  {
+    "name": "Li Tao",
+    "nameZh": "陶莉",
+    "group": "hkust",
+    "affiliation": "Thrust of Bioscience and Biomedical Engineering, Systems Hub, HKUST(GZ)",
+    "affiliationZh": "香港科技大学（广州）系统枢纽，生命科学与生物医学工程学域",
+    "href": "https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/TAO-Li/litao"
+  },
+  {
+    "name": "Xiaomeng Li",
+    "nameZh": "李晓萌",
+    "group": "hkust",
+    "affiliation": "Thrust of Bioscience and Biomedical Engineering, Systems Hub, HKUST(GZ)",
+    "affiliationZh": "香港科技大学（广州）系统枢纽，生命科学与生物医学工程学域",
+    "href": "https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/LI-Xiaomeng/xiaomengli"
+  },
+  {
+    "name": "Jianfeng Sun",
+    "nameZh": "孙鉴锋",
+    "group": "hkust",
+    "affiliation": "Thrust of Bioscience and Biomedical Engineering, Systems Hub, HKUST(GZ)",
+    "affiliationZh": "香港科技大学（广州）系统枢纽，生命科学与生物医学工程学域",
+    "href": "https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/SUN-Jianfeng/jianfengsun"
+  },
+  {
+    "name": "Min Tian",
+    "nameZh": "田敏",
+    "group": "hkust",
+    "affiliation": "Thrust of Bioscience and Biomedical Engineering, Systems Hub, HKUST(GZ)",
+    "affiliationZh": "香港科技大学（广州）系统枢纽，生命科学与生物医学工程学域",
+    "href": "https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/TIAN-Min/mint"
+  },
+  {
+    "name": "Kefei Liu",
+    "nameZh": "刘克飞",
+    "group": "hkust",
+    "affiliation": "Thrust of Bioscience and Biomedical Engineering, Systems Hub, HKUST(GZ)",
+    "affiliationZh": "香港科技大学（广州）系统枢纽，生命科学与生物医学工程学域",
+    "href": "https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/LIU-Kefei/kefeiliu"
+  },
+  {
+    "name": "Cheng Zhang",
+    "nameZh": "张程",
+    "group": "hkust",
+    "affiliation": "Thrust of Bioscience and Biomedical Engineering, Systems Hub, HKUST(GZ)",
+    "affiliationZh": "香港科技大学（广州）系统枢纽，生命科学与生物医学工程学域",
+    "href": "https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/ZHANG-Cheng/chengzhang"
+  },
+  {
+    "name": "Wenyu Wang",
+    "nameZh": "王文宇",
+    "group": "hkust",
+    "affiliation": "Thrust of Smart Manufacturing, Systems Hub, HKUST(GZ)",
+    "affiliationZh": "香港科技大学（广州）系统枢纽，智能制造学域",
+    "href": "https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/WANG-Wenyu/wenyuwang"
+  },
+  {
+    "name": "Kaishun Wu",
+    "nameZh": "伍楷舜",
+    "group": "hkust",
+    "affiliation": "Thrust of Data Science and Analytics, Information Hub, HKUST(GZ)",
+    "affiliationZh": "香港科技大学（广州）信息枢纽，数据科学与分析学域",
+    "href": "https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/WU-Kaishun/wuks"
+  },
+  {
+    "name": "Shuxin Zhong",
+    "nameZh": "钟舒馨",
+    "group": "hkust",
+    "affiliation": "Thrust of Data Science and Analytics, Information Hub, HKUST(GZ)",
+    "affiliationZh": "香港科技大学（广州）信息枢纽，数据科学与分析学域"
+  },
+  {
+    "name": "Ping Gao",
+    "nameZh": "高平",
+    "group": "hkust",
+    "affiliation": "Thrust of Advanced Materials, Function Hub, HKUST(GZ)",
+    "affiliationZh": "香港科技大学（广州）功能枢纽，先进材料学域",
+    "href": "https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page/GAO-Ping/kepgao"
+  },
+  {
+    "name": "Kai Liu",
+    "nameZh": "刘凯",
+    "group": "hkust",
+    "affiliation": "Division of Life Science, HKUST",
+    "affiliationZh": "香港科技大学，生命科学部",
+    "href": "https://www.kai-liu-lab.com/"
+  },
+  {
+    "name": "Pei-Yuan Qian",
+    "nameZh": "钱培元",
+    "group": "hkust",
+    "affiliation": "Division of Life Science, HKUST",
+    "affiliationZh": "香港科技大学，生命科学部",
+    "href": "https://life-sci.hkust.edu.hk/team/pei-yuan-qian/"
+  },
+  {
+    "name": "Marc-David Ruepp",
+    "group": "external",
+    "affiliation": "UK Dementia Research Institute, Institute of Psychiatry, Psychology & Neuroscience, King’s College London, UK",
+    "affiliationZh": "英国伦敦国王学院，精神病学、心理学与神经科学研究所，英国失智症研究所",
+    "href": "https://www.ukdri.ac.uk/team/marc-david-ruepp"
+  },
+  {
+    "name": "Deepak Khuperkar",
+    "group": "external",
+    "affiliation": "UK Dementia Research Institute, Institute of Psychiatry, Psychology & Neuroscience, King’s College London, UK",
+    "affiliationZh": "英国伦敦国王学院，精神病学、心理学与神经科学研究所，英国失智症研究所",
+    "href": "https://www.kcl.ac.uk/people/deepak-khuperkar"
+  },
+  {
+    "name": "Jernej Ule",
+    "group": "external",
+    "affiliation": "UK Dementia Research Institute, Institute of Psychiatry, Psychology & Neuroscience, King’s College London, UK",
+    "affiliationZh": "英国伦敦国王学院，精神病学、心理学与神经科学研究所，英国失智症研究所",
+    "href": "https://www.ulelab.info/"
+  },
+  {
+    "name": "Flora Chi Yan Lee",
+    "group": "external",
+    "affiliation": "Centre for Developmental Neurobiology, Institute of Psychiatry, Psychology & Neuroscience, King’s College London, UK",
+    "affiliationZh": "英国伦敦国王学院，精神病学、心理学与神经科学研究所，发育神经生物学中心",
+    "href": "https://devneuro.org/cdn/people-detail.php?personID=2335"
+  },
+  {
+    "name": "Hector Albert-Gasco",
+    "group": "external",
+    "affiliation": "Jaume I University, Castelló de la Plana, Spain",
+    "affiliationZh": "西班牙卡斯特利翁-德拉普拉纳，海梅一世大学",
+    "href": "https://portalcientific.uji.es/investigadores/2503045/detalle?lang=en"
+  },
+  {
+    "name": "Meng Lu",
+    "nameZh": "卢萌",
+    "group": "external",
+    "affiliation": "Institute of Medical Technology, Peking University Health Science Center, Beijing, China",
+    "affiliationZh": "北京大学医学部医学技术研究院",
+    "href": "http://scholar.pku.edu.cn/menglulab/lu-meng"
+  },
+  {
+    "name": "Feng Wan",
+    "nameZh": "万峰",
+    "group": "external",
+    "affiliation": "Zhongnan Hospital of Wuhan University, Wuhan, China",
+    "affiliationZh": "武汉大学中南医院",
+    "href": "https://www.znhospital.cn/SJWK/expert_team/detail/16439.html"
+  },
+  {
+    "name": "Dongying Zheng",
+    "nameZh": "郑东颖",
+    "group": "external",
+    "affiliation": "Guangdong Provincial People's Hospital, Guangzhou, China",
+    "affiliationZh": "广东省人民医院"
+  },
+  {
+    "name": "Songren Wei",
+    "nameZh": "韦淞仁",
+    "group": "external",
+    "affiliation": "Zhujiang Hospital Institute for Brain Science and Intelligence, Southern Medical University, Guangzhou, China",
+    "affiliationZh": "南方医科大学珠江医院脑科学与智能研究所",
+    "href": "https://pinolilab.org/"
+  },
+  {
+    "name": "Haitao Sun",
+    "nameZh": "孙海涛",
+    "group": "external",
+    "affiliation": "Zhujiang Hospital Biobank, Southern Medical University, Guangzhou, China",
+    "affiliationZh": "南方医科大学珠江医院生物样本库",
+    "href": "https://www.zjyy.com.cn/news/doctor_details.html?fd_loginId=7709&fd_branchId=162"
+  },
+  {
+    "name": "Hovy Ho Wai WONG",
+    "nameZh": "黃皓瑋",
+    "group": "external",
+    "affiliation": "School of Biomedical Sciences & Gerald Choa Neuroscience Institute, Chinese University of Hong Kong, Hong Kong, China",
+    "affiliationZh": "香港中文大学，生物医学学院 & 蔡永业脑神经科学中心",
+    "href": "https://www.cuhk.edu.hk/gcni/hovywong/"
+  },
+  {
+    "name": "Linda Shen Gu",
+    "nameZh": "顾燊",
+    "group": "external",
+    "affiliation": "School of Biomedical Sciences & Gerald Choa Neuroscience Institute, Chinese University of Hong Kong, Hong Kong, China",
+    "affiliationZh": "香港中文大学，生物医学学院 & 蔡永业脑神经科学中心",
+    "href": "https://www3.sbs.cuhk.edu.hk/en/our_people/prof-gu-shen-linda/"
+  },
+  {
+    "name": "Alejandro Carnicer Lombarte",
+    "group": "external",
+    "affiliation": "Department of Biomedical Engineering, City University of Hong Kong, Hong Kong, China",
+    "affiliationZh": "香港城市大学，生物医学工程学系",
+    "href": "https://www.cityu.edu.hk/bme/acarnice/"
+  },
+  {
+    "name": "Anna King",
+    "group": "external",
+    "affiliation": "Wicking Dementia Research Education Centre, University of Tasmania, Australia",
+    "affiliationZh": "澳大利亚塔斯马尼亚大学，威金失智症研究与教育中心",
+    "href": "https://discover.utas.edu.au/A.E.King"
+  },
+  {
+    "name": "Prof Christine Holt",
+    "group": "external",
+    "affiliation": "University of Cambridge, UK",
+    "affiliationZh": "University of Cambridge, UK"
+  },
+  {
+    "name": "Prof Giovanna Mallucci",
+    "group": "external",
+    "affiliation": "Altos Labs, UK",
+    "affiliationZh": "Altos Labs, UK"
+  },
+  {
+    "name": "Prof Clemens Kaminski",
+    "group": "external",
+    "affiliation": "University of Cambridge, UK",
+    "affiliationZh": "University of Cambridge, UK"
+  },
+  {
+    "name": "Dr Emmanouil Metzakoipian",
+    "group": "external",
+    "affiliation": "bit.bio, UK",
+    "affiliationZh": "bit.bio, UK"
+  },
+  {
+    "name": "Prof Peter St George-Hyslop",
+    "group": "external",
+    "affiliation": "University of Cambridge, UK",
+    "affiliationZh": "University of Cambridge, UK"
+  },
+  {
+    "name": "Dr Nicholas Clifton",
+    "group": "external",
+    "affiliation": "University of Exeter, UK",
+    "affiliationZh": "University of Exeter, UK"
+  }
+];

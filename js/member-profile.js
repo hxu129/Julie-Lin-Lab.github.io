@@ -6,6 +6,7 @@
       education: 'Education',
       contact: 'Contact',
       links: 'Academic profiles',
+      time: 'Time in the lab',
       unavailable: 'Profile unavailable',
       returnLabel: 'Return to people'
     },
@@ -15,6 +16,7 @@
       education: '教育经历',
       contact: '联系方式',
       links: '学术主页',
+      time: '在组时间',
       unavailable: '暂未找到该成员资料',
       returnLabel: '返回成员页'
     }
@@ -65,7 +67,7 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     const root = document.querySelector('[data-member-profile]');
-    const people = window.LIN_LAB_PEOPLE;
+    const people = [...(window.LIN_LAB_PEOPLE || []), ...(window.LIN_LAB_ALUMNI || [])];
     if (!root || !Array.isArray(people)) return;
 
     const params = new URLSearchParams(window.location.search);
@@ -85,12 +87,12 @@
       return;
     }
 
-    document.title = `${chinese ? person.nameZh : person.name} — Lin Lab`;
+    document.title = `${chinese ? person.nameZh || person.name : person.name} — Lin Lab`;
     const peopleHref = chinese ? 'people_zh.html' : 'people.html';
-    const displayName = chinese ? person.nameZh : person.name;
+    const displayName = chinese ? person.nameZh || person.name : person.name;
     const alternateName = chinese ? person.name : person.nameZh;
-    const role = chinese ? person.roleZh : person.role;
-    const bio = chinese ? person.bioZh : person.bio;
+    const role = (person.status === 'alumni' ? chinese ? '过往成员 · ' : 'Alumni · ' : '') + (chinese ? person.roleZh || person.role || '' : person.role || '');
+    const bio = chinese ? person.bioZh || person.bio : person.bio || person.bioZh;
 
     const hero = create('section', 'member-hero');
     const heroCopy = create('div', 'member-hero__copy');
@@ -101,38 +103,54 @@
     back.href = peopleHref;
     heroCopy.append(back);
 
-    const portrait = create('figure', 'member-hero__portrait');
-    const image = document.createElement('img');
-    image.alt = chinese ? `${person.nameZh} (${person.name}) 的肖像` : `Portrait of ${person.name}`;
-    image.src = person.image;
-    image.style.objectPosition = person.objectPosition;
-    image.width = 1200;
-    image.height = 1200;
-    portrait.append(image);
-    hero.append(heroCopy, portrait);
+    hero.append(heroCopy);
+    if (person.image) {
+      const portrait = create('figure', 'member-hero__portrait');
+      const image = document.createElement('img');
+      image.alt = chinese ? `${person.nameZh || person.name} (${person.name}) 的肖像` : `Portrait of ${person.name}`;
+      image.src = person.image;
+      image.style.objectPosition = person.objectPosition || '50% 50%';
+      image.width = 1200;
+      image.height = 1200;
+      portrait.append(image);
+      hero.append(portrait);
+    } else {
+      hero.classList.add('member-hero--text');
+    }
 
     const detail = create('div', 'member-profile__detail');
+    if (!bio) detail.classList.add('member-profile__detail--facts-only');
     const reading = create('section', 'member-profile__reading');
-    reading.append(create('h2', '', text.profile));
-    if (bio) reading.append(create('p', '', bio));
+    if (bio) {
+      reading.append(create('h2', '', text.profile));
+      reading.append(create('p', '', bio));
+    }
 
     const facts = create('aside', 'member-profile__facts');
     const education = create('section');
     education.append(create('h2', '', text.education));
     const educationList = create('ul');
-    const entries = chinese ? person.educationZh.split(/(?=\d{4}年\d{1,2}月-)/) : person.education;
+    const entries = chinese && person.educationZh ? person.educationZh.split(/\n|(?=\d{4}年\d{1,2}月-)/) : person.education || [];
     entries.filter(Boolean).forEach((entry) => educationList.append(create('li', '', entry)));
     education.append(educationList);
-    facts.append(education);
+    if (entries.length) facts.append(education);
+
+    if (person.startMonth || person.endMonth) {
+      const month = (value) => chinese ? `${value.slice(0, 4)}年${Number(value.slice(5))}月` : new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}-01T00:00:00Z`));
+      const dates = person.startMonth ? `${month(person.startMonth)} – ${person.endMonth ? month(person.endMonth) : chinese ? '至今' : 'present'}` : `${chinese ? '截至' : 'Until '}${month(person.endMonth)}`;
+      const time = create('section');
+      time.append(create('h2', '', text.time), create('p', 'member-profile__period', dates));
+      facts.append(time);
+    }
 
     const contact = create('section');
     contact.append(create('h2', '', text.contact));
     const email = create('a', 'member-profile__email', person.email);
     email.href = `mailto:${person.email}`;
     contact.append(email);
-    facts.append(contact);
+    if (person.email) facts.append(contact);
 
-    if (person.links.length) {
+    if (person.links?.length) {
       const links = create('section');
       links.append(create('h2', '', text.links));
       const linkList = create('div', 'member-profile__links');

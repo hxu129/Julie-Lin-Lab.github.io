@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#f5f1e8">
+    <title>更新成员资料 — Lin Lab</title>
+    <link rel="stylesheet" href="/editor.css">
+    <script src="/editor.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳至正文</a>
+    <header class="site-header">
+      <a class="wordmark public-site-link" href="#">Lin Lab <span>成员资料维护</span></a>
+      <a class="quiet-link public-site-link" href="#" target="_blank" rel="noopener noreferrer">查看网站 <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main-content" class="shell">
+      <div class="intro">
+        <p class="eyebrow">Lin Lab · People</p>
+        <h1>更新在组资料</h1>
+        <p class="intro__summary">维护个人介绍与在组时间，让网站上的信息保持准确。</p>
+        <p id="session-label" class="session-label">正在确认访问权限…</p>
+      </div>
+      <div id="error-message" class="notice notice--error" role="alert" hidden></div>
+      <p id="status-message" class="notice" role="status" aria-live="polite">正在载入资料…</p>
+      <button id="retry-session" class="button button--secondary" type="button" hidden>重新连接</button>
+      <div id="workspace" class="workspace" hidden>
+        <aside id="member-sidebar" class="member-sidebar" aria-label="选择成员" hidden>
+          <div class="sidebar-heading"><h2>成员</h2><button id="new-member" class="text-button" type="button">＋ 新增</button></div>
+          <label class="search-label" for="member-search">查找成员</label>
+          <input id="member-search" type="search" placeholder="姓名或邮箱" autocomplete="off">
+          <label class="sr-only" for="member-filter">成员状态</label>
+          <select id="member-filter"><option value="all">全部成员</option><option value="current">当前成员</option><option value="alumni">过往成员</option></select>
+          <p id="member-count" class="field-help"></p>
+          <div id="member-list" class="member-list" aria-label="成员列表"></div>
+          <button id="export-data" class="text-button export-button" type="button">导出资料备份 <span aria-hidden="true">↓</span></button>
+        </aside>
+        <div class="editor-main">
+          <div id="empty-state" class="empty-state" hidden><h2>选择一位成员</h2><p>从左侧名录选择，或新增成员。</p></div>
+          <form id="member-form" hidden>
+            <div class="form-heading"><div><p id="record-label" class="eyebrow">成员资料</p><h2 id="member-title">个人资料</h2></div><a id="profile-preview" class="quiet-link" href="#" target="_blank" rel="noopener noreferrer" hidden>查看个人页 ↗</a></div>
+            <p class="publication-note">保存后，以下资料会显示在实验室网站上。请只填写适合公开的内容；未知的起止月份可以留空。</p>
+            <fieldset>
+              <legend>个人信息 <span>Personal information</span></legend>
+              <div class="field-grid">
+                <div class="field"><label for="name">英文姓名 <span class="required">必填</span></label><input id="name" name="name" required maxlength="120" autocomplete="name"></div>
+                <div class="field"><label for="nameZh">中文姓名</label><input id="nameZh" name="nameZh" maxlength="120" autocomplete="off"></div>
+                <div class="field"><label for="role">在组身份 <span class="required">必填</span></label><select id="role" name="role" required><option value="PhD Student">博士研究生 · PhD Student</option><option value="MPhil Student">硕士研究生 · MPhil Student</option><option value="Postdoctoral Fellow">博士后 · Postdoctoral Fellow</option><option value="Research Assistant">研究助理 · Research Assistant</option><option value="Undergraduate Researcher">本科生研究员 · Undergraduate Researcher</option><option value="Research Intern">科研实习生 · Research Intern</option><option value="Technical &amp; Administrative Assistant">技术与行政助理 · Technical &amp; Administrative Assistant</option></select></div>
+                <div class="field"><label for="email">工作／学术邮箱</label><input id="email" name="email" type="email" maxlength="254" autocomplete="email"></div>
+              </div>
+              <div class="photo-field">
+                <div class="portrait"><img id="portrait-preview" alt="成员头像" width="160" height="180" hidden><span id="portrait-placeholder">尚未上传头像</span></div>
+                <div class="photo-field__controls"><label for="photo-file">更新头像</label><input id="photo-file" type="file" accept="image/jpeg,image/png,image/webp"><p id="photo-help" class="field-help">支持 JPG、PNG、WebP，最大 5 MB。上传后请保存资料。</p></div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>在组时间 <span>Time in the lab</span></legend>
+              <div class="field-grid">
+                <div class="field"><label for="status">成员状态</label><select id="status" name="status"><option value="current">当前成员</option><option value="alumni">过往成员</option></select></div>
+                <div id="alumni-group-field" class="field" hidden><label for="alumniGroup">过往成员分组</label><select id="alumniGroup" name="alumniGroup"><option value="interns">科研实习生</option><option value="assistants">技术与行政助理</option><option value="undergraduates">本科生</option><option value="graduates">硕博研究生</option><option value="postdocs">博士后</option></select></div>
+                <div class="field"><label for="startMonth">开始月份</label><input id="startMonth" name="startMonth" type="month" min="1900-01" max="2100-12"><p class="field-help">填写加入实验室的月份。</p></div>
+                <div class="field"><label for="endMonth">结束月份 <span id="end-required" class="required" hidden>过往成员必填</span></label><input id="endMonth" name="endMonth" type="month" min="1900-01" max="2100-12"><p class="field-help">仍在组且未确定结束时间时，留空即可。</p></div>
+              </div>
+              <details id="destination-details" class="optional-fields"><summary>目前去向与离组后的经历</summary><div class="field-grid"><div class="field"><label for="position">目前职位／去向（英文）</label><input id="position" name="position" maxlength="1500"></div><div class="field"><label for="positionZh">目前职位／去向（中文）</label><input id="positionZh" name="positionZh" maxlength="1500"></div><div class="field"><label for="nextPosition">离组后的下一站（英文）</label><input id="nextPosition" name="nextPosition" maxlength="1500"></div><div class="field"><label for="nextPositionZh">离组后的下一站（中文）</label><input id="nextPositionZh" name="nextPositionZh" maxlength="1500"></div></div><p class="field-help">如果离组后的第一站与目前职位不同，可以分别保留。</p></details>
+            </fieldset>
+            <fieldset>
+              <legend>个人介绍 <span>Biography &amp; background</span></legend>
+              <div class="field-grid">
+                <div class="field"><label for="bio">英文介绍</label><textarea id="bio" name="bio" rows="8" maxlength="20000"></textarea></div>
+                <div class="field"><label for="bioZh">中文介绍</label><textarea id="bioZh" name="bioZh" rows="8" maxlength="20000"></textarea></div>
+                <div class="field"><label for="education">教育经历（英文）</label><textarea id="education" name="education" rows="5" maxlength="20000" aria-describedby="education-help"></textarea><p id="education-help" class="field-help">每段经历单独一行。</p></div>
+                <div class="field"><label for="educationZh">教育经历（中文）</label><textarea id="educationZh" name="educationZh" rows="5" maxlength="10000"></textarea></div>
+              </div>
+              <div class="field"><label for="links">学术主页</label><textarea id="links" name="links" rows="3" aria-describedby="links-help" placeholder="https://…"></textarea><p id="links-help" class="field-help">每行一个网址，如个人主页、Google Scholar 或 ORCID。</p></div>
+            </fieldset>
+            <section id="sharing-panel" class="sharing-panel" aria-labelledby="sharing-title" hidden>
+              <div><h3 id="sharing-title">让成员自行维护</h3><p>生成仅能编辑这位成员的专属链接。对方也需要连接 Tailscale。</p></div>
+              <button id="create-edit-link" class="button button--secondary" type="button">生成专属编辑链接</button>
+              <div id="edit-link-result" hidden><label for="edit-link">专属编辑链接</label><div class="copy-row"><input id="edit-link" type="text" readonly autocomplete="off" spellcheck="false"><button id="copy-link" class="button button--secondary" type="button">复制</button></div><p class="field-help">请只交给对应成员。重新生成后，旧链接会失效。</p></div>
+            </section>
+            <div class="save-bar"><div><p id="save-state">资料已载入</p><span id="save-help">保存会直接更新网站。</span></div><div class="save-bar__actions"><button id="reload-record" class="button button--secondary" type="button">重新载入</button><button id="save-record" class="button" type="submit">保存并更新网页</button></div></div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer"><span>Lin Lab · 成员资料维护</span><a class="public-site-link" href="#" target="_blank" rel="noopener noreferrer">返回实验室网站 ↗</a></footer>
+  </body>
+</html>

@@ -87,9 +87,21 @@ The first portrait-index implementation still read like a contact directory: a s
 - **PI stage:** Julie is no longer a small item in a grid. A single dark editorial panel establishes the PI's name and role beside the original portrait before the roster begins.
 - **Dossiers:** individual profiles use the same midnight editorial stage—identity on ink, portrait as the adjacent full-height image, detailed biography on paper—rather than the former detached, pale left-text/right-image template.
 
+## Revision 12 — Alumni and a quieter reading hierarchy
+
+The supplied `Alumni information.docx` (27 October 2026) adds 14 alumni and 27 collaborators in English and Chinese. Alumni remain separate from the current-member portrait index: a text ledger records their time in the lab and only the destinations supplied. Yan Ji's Harvard RA position and current Oxford DPhil position remain distinct. Ziqi Xie's existing introductions are retained as clearly dated archive pages with corrected names and language links. Six previously listed collaborators absent from the new document remain listed; absence alone does not establish that a collaboration ended. The supplied homepage URLs are retained without adding links for the two entries that have none.
+
+People now has local navigation for members, alumni, and collaborators. The opening photograph keeps its full composition, and the PI panel stacks on narrow phones. Home retains the paper-and-ink palette with more open title spacing, a simpler microscopy-and-text spread, and uncropped book and conference artwork. Long publication titles receive a more readable line height. Content is visible by default; reveal animations begin only after the observer initializes.
+
+## Revision 13 — Maintainable profiles and consistent page furniture
+
+The visual system now uses the wordmark's affiliation divider inside the lockup, clearer footer text, more open research-row typography, and consistent portrait caption spacing. Profile text has a bounded reading measure and a common rule above biography and facts. Missing portraits use initials in the directory, without substituting generated identity imagery; profiles with only factual information use a single reading column.
+
+The private member editor shares the paper-and-ink palette with explicit form labels, a sticky save action, mobile layouts, and separate administrator and personal editing flows. Membership months are independent of education dates and appear only when supplied. The current and alumni directories read the generated member data from the maintenance store, while the retained source material remains the import baseline. Operational configuration, authorization tokens, database history and editor source are excluded from the public static deployment.
+
 ## Release content and asset contract
 
-- `main` is the sole source of truth for visible research, publication, people, news, recruitment, and contact content. A visual re-layout may split source text into semantic HTML, but must not introduce a claim, omit a source fact, or paraphrase it into a different assertion.
+- `main` is the baseline source for visible research, publication, people, news, recruitment, and contact content, supplemented by the supplied personnel workbook and `Alumni information.docx` for the records described above. A visual re-layout may split source text into semantic HTML, but must not introduce a claim, omit a source fact, or paraphrase it into a different assertion.
 - The user has authorized all imagery in `homepage_figure.zip` for visual use. Archive-derived images retain a small `Lin Lab image archive` credit and must not receive an added caption that asserts an experiment, tissue, channel, organism, result, or project claim.
 - Existing source images may be re-cropped or reordered for visual hierarchy, but their placement must not imply a new result, project, affiliation, or event.
 - Generated layout mockups are review references only. The three deployed `rna-field-notes-*.webp` illustrations are original decorative artwork; they must never be presented as research images, publication figures, experimental evidence, or scientific claims.
